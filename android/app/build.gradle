@@ -131,11 +131,12 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.myreactnative"
+        applicationId 'com.shashank_reddy3.MyReactNative'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
+        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -183,8 +184,23 @@ android {
 }
 
 dependencies {
+     // If your app supports Android versions before Ice Cream Sandwich (API level 14)
+  implementation 'com.facebook.fresco:animated-base-support:1.3.0'
+
+  // For animated GIF support
+    implementation 'com.facebook.fresco:animated-gif:2.0.0'
+
+    // For WebP support, including animated WebP
+    implementation 'com.facebook.fresco:animated-webp:2.1.0'
+    implementation 'com.facebook.fresco:webpsupport:2.0.0'
+
+    // For WebP support, without animations
+    implementation 'com.facebook.fresco:webpsupport:2.0.0'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
+    implementation project(':react-native-linear-gradient')
+    implementation project(':lottie-react-native')
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {

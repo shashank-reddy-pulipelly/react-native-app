@@ -1,4 +1,4 @@
-package com.myreactnative.generated;
+package com.shashank_reddy3.MyReactNative.generated;
 
 import java.util.Arrays;
 import java.util.List;

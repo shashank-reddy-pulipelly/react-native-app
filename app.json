@@ -1,12 +1,19 @@
 {
-  "name": "MyReactNative",
-  "displayName": "MyReactNative",
+  "name": "Mobifood",
+  "displayName": "Mobifood",
   "expo": {
-    "name": "MyReactNative",
-    "slug": "MyReactNative",
+    "name": "Mobifood",
+    "slug": "Mobifood",
     "version": "1.0.0",
+     "icon": "./assets/logo.png",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.shashank_reddy3.MyReactNative"
+    },
+    "ios": {
+      "bundleIdentifier": "sha"
+    }
   }
 }
